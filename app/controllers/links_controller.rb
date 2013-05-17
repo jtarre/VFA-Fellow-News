@@ -5,7 +5,11 @@ class LinksController < ApplicationController
  
   def create 
      link = Link.new(params[:link])
-     link.save
+     if link.save
+       render :action => "show"
+     else
+       
+     end
   end
   
   def new
