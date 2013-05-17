@@ -3,11 +3,17 @@ class LinksController < ApplicationController
     
   end
  
-  def create
-    
+  def create 
+     link = Link.new(params[:link])
+     link.save
   end
   
   def new
-    @link = Link.new
+     @link = Link.new
   end
+  
+  def edit
+    
+  end
+  
 end
