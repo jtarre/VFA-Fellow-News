@@ -1,8 +1,11 @@
+
 <h2>I am a homepage</h2>
 
 <%= link_to "Add a link", new_link_path %>
+
 <ul>
   <% @links.each do |link| %>
-    <li>  <%= link_to link.title, link.url %> </li>
+    <li>  <%= link_to link.title, link.url %>  <%= link_to "comments", link %></li>
   <% end %>
 </ul>
+	
