@@ -2,7 +2,7 @@ RedditOnRails::Application.routes.draw do
   
   devise_for :users
 
-  resources :pages, :links, :comments
+  resources :pages, :links, :comments, :votes
   
   root :to =>"pages#index"
   
