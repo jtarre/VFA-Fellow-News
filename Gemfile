@@ -8,6 +8,11 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'devise'
 
+#A gem that adds simple support for organizing ActiveRecord models into parent–children relationships.
+#gem "acts_as_tree", "~> 1.3.0"
+
+#A gem that turns a model into tree structure
+gem 'ancestry', "~> 2.0.0"
 
 ## Gemfile for Rails 3, Sinatra, and Merb
 gem 'will_paginate', '~> 3.0'
