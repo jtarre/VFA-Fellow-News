@@ -1,5 +1,6 @@
-<div id="comment_<%= comment.id %>">
-  <h1><%= comment.title %> </h1>
-  <%= comment.content %>
-  <%= render :partial => 'comments/comment', :collection => comments.children %>
+<div>
+    <h6> <%= @comment.parent.message %> </h6>
+    <%= link_to "Reply", new_comment_path( :link_id => :link_id, :parent_id => :parent_id , :message => :message ) %>
+    <h3><%= @comment.parent.children if @comment.parent.children %>
+    
 </div>

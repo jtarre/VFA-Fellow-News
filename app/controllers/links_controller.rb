@@ -12,9 +12,14 @@ class LinksController < ApplicationController
   def create 
      link = Link.new(params[:link])
      if link.save
+        @link    = link
+        @comment = Comment.new
        render :action => "show"
-     else
+       #redirect_to :action => "index"
+      #format.html { redirect_to :action => 'show', :id => params[:id], :notice => 'link was successfully saved.' }
        
+     else
+       render :action => "index"
      end
   end
   
