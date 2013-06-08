@@ -1,11 +1,10 @@
-<h3>this is the show template.</h3>
-
-<h2>Comments:</h2>
+<h2>Comments</h2>
   <% @link.comments.each do |comment| %>
 <div>
-    <h6><%= comment.message %></h6>
-    <h6><%= link_to "Reply", new_comment_path( :link_id => @link.id, :parent_id => comment, :message => comment.message ) %></h6>
-  <% end %>
+	<% if comment.is_root? %>
+	<%= nested_comments comment.subtree.arrange(:order => :created_at) %>
+    <% end %>
+   <% end %>
 </div>
 
 <%= render 'links/comment' %>

@@ -1,6 +1,8 @@
-<div>
-    <h6> <%= @comment.parent.message %> </h6>
-    <%= link_to "Reply", new_comment_path( :link_id => :link_id, :parent_id => :parent_id , :message => :message ) %>
-    <h3><%= @comment.parent.children if @comment.parent.children %>
-    
+<div class="comment">
+  <div class="content">
+    <%= comment.message %>
+  </div>
+  <div class="actions">
+    <%= link_to "Reply", new_comment_path(:parent_id => comment ) %>
+  </div>
 </div>

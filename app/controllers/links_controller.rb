@@ -14,7 +14,7 @@ class LinksController < ApplicationController
      if link.save
         @link    = link
         @comment = Comment.new
-       render :action => "show"
+        redirect_to link
        #redirect_to :action => "index"
       #format.html { redirect_to :action => 'show', :id => params[:id], :notice => 'link was successfully saved.' }
        

@@ -2,7 +2,7 @@
 
 This is the new template. Woo!
 
-<%= render 'comments/comment' %>
+<%= render :partial => 'comments/comment', :locals => { :comment => @comment.parent } %>
 
 <%= render 'comments/form' %>
 
