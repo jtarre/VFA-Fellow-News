@@ -6,7 +6,9 @@ gem 'bootstrap-sass', '2.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3', '1.3.5'
+end
 gem 'devise'
 
 #A gem that adds simple support for organizing ActiveRecord models into parent–children relationships.
@@ -17,6 +19,10 @@ gem 'ancestry', "~> 2.0.0"
 
 ## Gemfile for Rails 3, Sinatra, and Merb
 gem 'will_paginate', '~> 3.0'
+
+group :production do
+  gem 'pg', '0.12.2'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
